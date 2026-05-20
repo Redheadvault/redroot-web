@@ -218,20 +218,19 @@
 
     <p class="page-eyebrow">Legal</p>
     <h1 class="page-title">Privacy Policy</h1>
-    <p class="page-meta">Effective date: May 7, 2026 &nbsp;·&nbsp; Redroot, developed by RHS</p>
+    <p class="page-meta">Effective date: May 20, 2026 &nbsp;·&nbsp; Redroot, developed by RHS</p>
 
     <div class="summary-card">
-      <p><strong>The short version:</strong> Redroot stores your data in your own iCloud account. We do not collect it, sell it, or have access to it. The only time data leaves your device is when you explicitly use the AI assistant or voice transcription features — and only the content you submit in that moment is sent.</p>
+      <p><strong>The short version:</strong> Redroot stores everything in your own iCloud account. We have no backend server and collect no analytics. The only time data leaves your device is when you explicitly use an optional feature that requires it.</p>
     </div>
 
 
-    <h2>What Redroot stores and where</h2>
-    <p>All data you create in Redroot — events, tasks, lists, habits, goals, notes, voice recordings, medications, finance records, sleep data, and health check-ins — is stored exclusively in your personal iCloud account via Apple's CloudKit framework.</p>
-    <p>This means:</p>
+    <h2>Data storage</h2>
+    <p>All data you create in Redroot — events, tasks, lists, habits, goals, notes, voice recordings, medications, finance records, sleep logs, mental state check-ins, period tracking, intake logs, and project files — is stored exclusively in your personal iCloud account via Apple's CloudKit framework.</p>
     <ul>
       <li>Your data lives in <strong>your</strong> iCloud account, not on our servers</li>
       <li>It syncs across your own devices automatically via Apple's infrastructure</li>
-      <li>We do not have a backend server that stores, processes, or has access to your data</li>
+      <li>We have no backend server that stores, processes, or has access to your data</li>
       <li>Deleting the app or your iCloud data removes it entirely</li>
     </ul>
 
@@ -244,44 +243,61 @@
       <li>Device identifiers or advertising IDs</li>
       <li>Your name, email address, or any account information</li>
       <li>Location data</li>
-      <li>Browsing or behavioral data</li>
     </ul>
-    <p>We have no user accounts. Redroot uses your Apple ID solely for iCloud authentication, which is handled entirely by Apple.</p>
+    <p>We have no user accounts. Your Apple ID is used solely for iCloud authentication, which is handled entirely by Apple.</p>
+
+
+    <hr class="section-divider">
+
+
+    <h2>Health &amp; sensor data</h2>
+    <p>Some Redroot modules access health and sensor data on your device:</p>
+    <ul>
+      <li><strong>HealthKit</strong> — used to read and write sleep data when the Sleep module is enabled</li>
+      <li><strong>CoreMotion</strong> — accelerometer data is used locally for automatic sleep detection; it is never transmitted</li>
+      <li><strong>EventKit</strong> — used to read your Apple Calendar events when external calendar sync is enabled</li>
+      <li><strong>Photos</strong> — used when you attach images to notes or events</li>
+    </ul>
+    <p>All sensor and health data stays on your device or in your iCloud account. None of it is transmitted to us.</p>
+
+
+    <h2>Watch app</h2>
+    <p>The Redroot Watch app syncs intake, medication, and sleep logs with your iPhone via iCloud Key-Value storage. No data is transmitted to any server — sync happens through Apple's infrastructure only.</p>
 
 
     <hr class="section-divider">
 
 
     <h2>AI assistant</h2>
-    <p>Redroot includes an optional AI chat feature. When you send a message to the AI assistant, that message — along with limited context from your app data that you choose to share — is transmitted to a third-party AI provider to generate a response.</p>
-    <p>Regarding this feature:</p>
+    <p>Redroot's AI chat feature supports multiple configurations:</p>
     <ul>
-      <li>Data is only sent when you actively use the chat feature</li>
-      <li>Conversations are not stored on our servers</li>
-      <li>The AI provider's own privacy policy governs how they handle submitted content</li>
-      <li>You can choose not to use this feature — it has no effect on the rest of the app</li>
+      <li><strong>On-device (default)</strong> — runs a local model entirely on your device; no data leaves</li>
+      <li><strong>External provider</strong> — if you configure an OpenAI-compatible or Ollama endpoint, messages and any context you share are sent to that provider</li>
+      <li>Conversations are not stored on our servers regardless of provider</li>
+      <li>You can use the app fully without ever enabling the AI feature</li>
     </ul>
+    <p>When using an external provider, that provider's own privacy policy governs how they handle submitted content.</p>
 
 
     <h2>Voice transcription</h2>
-    <p>The voice notes feature optionally uses AssemblyAI to transcribe audio recordings into text. If you configure and use this feature:</p>
+    <p>Voice notes can optionally be transcribed using AssemblyAI. If you configure and use this feature:</p>
     <ul>
-      <li>Your audio recording is transmitted to AssemblyAI's servers for transcription</li>
+      <li>Your audio is transmitted to AssemblyAI's servers for transcription</li>
       <li>AssemblyAI's privacy policy governs how they handle submitted audio</li>
-      <li>Transcription is optional — voice recordings can be stored as audio only without transcription</li>
-      <li>You supply your own AssemblyAI API key in settings; Redroot does not collect or transmit it</li>
+      <li>Transcription is optional — recordings can be kept as audio only</li>
+      <li>You supply your own AssemblyAI API key; Redroot does not collect or transmit it</li>
     </ul>
 
 
     <h2>GitHub integration</h2>
-    <p>Redroot includes an optional GitHub integration for use within project workspaces. If you configure this feature, requests are made directly from your device to GitHub's API using credentials you provide. GitHub's privacy policy governs how they handle those requests. Your GitHub credentials are stored locally on your device and are not transmitted to us.</p>
+    <p>The optional GitHub integration makes requests directly from your device to GitHub's API using a token you provide. Your token is stored locally and is not transmitted to us. GitHub's privacy policy governs those requests.</p>
 
 
     <hr class="section-divider">
 
 
     <h2>iCloud and Apple</h2>
-    <p>Because Redroot uses iCloud for all data storage and sync, Apple's iCloud and privacy policies apply to the underlying storage and sync infrastructure. You can review Apple's privacy policy at <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>.</p>
+    <p>Because Redroot uses iCloud for all data storage and sync, Apple's privacy policies apply to the underlying infrastructure. You can review Apple's privacy policy at <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>.</p>
 
 
     <h2>Changes to this policy</h2>
